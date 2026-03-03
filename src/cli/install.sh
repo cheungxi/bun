@@ -70,6 +70,9 @@ case $platform in
 'Linux aarch64' | 'Linux arm64')
     target=linux-aarch64
     ;;
+'Linux loongarch64')
+    target=linux-loong64
+    ;;
 'MINGW64'*'ARM64'* | 'MINGW64'*'aarch64'*)
     target=windows-aarch64
     ;;

@@ -10,6 +10,7 @@ smol OperatingSystem {
 smol Architecture {
     x64 = 1;
     arm = 2;
+    loong64 = 3;
 }
 
 struct Platform {

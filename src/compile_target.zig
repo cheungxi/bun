@@ -462,13 +462,14 @@ pub fn defineValues(this: *const CompileTarget) []const []const u8 {
     // Use inline else to avoid extra allocations.
     switch (this.os) {
         inline else => |os| switch (this.arch) {
-            inline .arm64, .x64 => |arch| return struct {
+            inline .arm64, .x64, .loongarch64 => |arch| return struct {
                 pub const values = &.{
                     "\"" ++ os.nameString() ++ "\"",
 
                     switch (arch) {
                         .x64 => "\"x64\"",
                         .arm64 => "\"arm64\"",
+                        .loongarch64 => "\"loong64\"",
                         .wasm => @compileError("TODO"),
                     },
 
