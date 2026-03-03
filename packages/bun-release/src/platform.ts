@@ -49,6 +49,12 @@ export const platforms: Platform[] = [
   },
   {
     os: "linux",
+    arch: "loong64",
+    bin: "bun-linux-loong64",
+    exe: "bin/bun",
+  },
+  {
+    os: "linux",
     arch: "x64",
     avx2: true,
     bin: "bun-linux-x64",
